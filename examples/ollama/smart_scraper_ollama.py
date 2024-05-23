@@ -1,25 +1,16 @@
 """ 
 Basic example of scraping pipeline using SmartScraper using Azure OpenAI Key
 """
-import os
-from dotenv import load_dotenv
-from langchain_openai import AzureOpenAIEmbeddings
+
+from langchain_community.embeddings import OllamaEmbeddings
 from scrapegraphai.graphs import SmartScraperGraph
 from scrapegraphai.utils import prettify_exec_info
-
-# required environment variable in .env
-# AZURE_OPENAI_API_VERSION
-# AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT_NAME
-load_dotenv()
 
 # ************************************************
 # Initialize the model instances
 # ************************************************
 
-embedder_model_instance = AzureOpenAIEmbeddings(
-    azure_deployment=os.environ["AZURE_OPENAI_EMBEDDINGS_DEPLOYMENT_NAME"],
-    openai_api_version=os.environ["AZURE_OPENAI_API_VERSION"],
-)
+embedder_model_instance = OllamaEmbeddings()
 
 # ************************************************
 # Create the SmartScraperGraph instance and run it
