@@ -3,7 +3,6 @@ Basic example of scraping pipeline using SmartScraper using Azure OpenAI Key
 """
 import os
 from dotenv import load_dotenv
-from langchain_openai import AzureChatOpenAI
 from langchain_openai import AzureOpenAIEmbeddings
 from scrapegraphai.graphs import SmartScraperGraph
 from scrapegraphai.utils import prettify_exec_info
