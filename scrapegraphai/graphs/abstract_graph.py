@@ -114,6 +114,12 @@ class AbstractGraph(ABC):
                     self.model_token = models_tokens['gemini'][llm.model]
             except KeyError:
                 raise KeyError("Model not supported")
+        
+        elif "Ollama" in str(type(llm)):
+            try:
+                self.model_token = models_tokens["ollama"][llm.model]
+            except KeyError:
+                raise KeyError("Model not supported")
 
     def _create_llm(self, llm_config: dict, chat=False) -> object:
         """

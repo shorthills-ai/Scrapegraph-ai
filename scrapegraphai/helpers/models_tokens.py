@@ -41,6 +41,7 @@ models_tokens = {
         "deepseek-coder:33b": 16000,
         "dolphin-mixtral": 32000,
         "llama2": 4096,
+        "llama2:latest": 4096,
         "llama3": 8192,
         "llama3:70b-instruct": 8192,
         "llava": 4096,
